@@ -10,11 +10,12 @@ int main(int argc, char* argv[]){
     scanf("%f", &altura);
     printf("Digite o peso: ");
     scanf("%f", &peso);
-    printf("A idade eh %d\n", idade);
-    printf("A altura eh %f\nO peso eh %2.f", altura, peso);
+    printf("A idade eh: %d\n", idade);
+    printf("A altura eh: %f\n", altura);
+    printf("O peso eh: %2.d\n",peso);
 
     float dobro_do_peso = peso * 2;
-    printf("O dobro do peso eh %.2f", dobro_do_peso);
+    printf("O dobro do peso eh %.2f\n" , dobro_do_peso);
 
     return 0;
     
