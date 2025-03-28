@@ -10,7 +10,7 @@ printf("Digite a altura: ");
     printf("Digite o peso: ");
     scanf("%f", &peso);
     printf("A altura e: %.2f\n", altura);
-    printf("O peso e: %f\n",peso);
+    printf("O peso e: %.2f\n",peso);
 
 IMC = peso/(altura*altura);
 printf("O IMC e de: %.2f\n", IMC);
