@@ -6,11 +6,11 @@ int main(int argc, char* argv[]){
 
     float n1, n2;
 
-printf("Digite o valor de n1: ");
+printf("Insira o primeiro valor: ");
 scanf("%f", &n1);
 
 
-printf("Digite o valor de n2: ");
+printf("Digite o segundo valor: ");
 scanf("%f", &n2);
 
 //Adição
@@ -51,7 +51,7 @@ printf("%.2f ++ = %.2f\n", n1-1, n1);
 
 //Decremento
 n1--;
-printf("%.2f -- = %.2f\n", n1+1, n1);
+printf("%.2f-- = %.2f\n", n1+1, n1);
 system("pause");
 
 return 0;
