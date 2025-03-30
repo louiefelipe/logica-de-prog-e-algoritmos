@@ -6,7 +6,7 @@ int main(int argc, char* argv[]){
 
 float raio, pi;
 
-    printf("\tCalcule a area de circulos!\n");
+    printf("\tCALCULE A AREA DE CIRCULOS\n");
     system("pause");
 
     printf("Insira o valor do raio: ");
@@ -15,7 +15,7 @@ float raio, pi;
     pi = 3.14159;
 
     float area_circulo = pi * pow(raio, 2);
-printf("A area do circulo e: %.3f\n", pi, raio, area_circulo);
+printf("A area do circulo e: %.3f\n", area_circulo);
 system("pause");
 
 return 0;

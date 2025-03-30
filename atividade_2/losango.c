@@ -6,7 +6,7 @@ int main(int argc, char* argv[]){
 
     float Diagonal_maior, diagonal_menor;
 
-    printf("\t Calcule a area de losangos!\n");
+    printf("\t CALCULE A AREA DE LOSANGOS!\n");
     system("pause");
 
     printf("Insira o valor da Diagonal maior: ");
@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
     scanf("%f", &diagonal_menor);
 
     float area_losango = (Diagonal_maior * diagonal_menor) / 2;
-    printf("A area do losango e de: %.2f", Diagonal_maior, diagonal_menor, area_losango);
+    printf("A area do losango e de: %.2f", area_losango);
 
     return 0;
 

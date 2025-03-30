@@ -6,7 +6,7 @@ int main(int argc, char* argv[]){
 
     float base, altura;
 
-    printf("\tCalcule a area de retangulos!\n");
+    printf("\tCALCULE A AREA DE RETANGULOS!\n");
 
     printf("Insira o valor da Base: ");
     scanf("%f", &base);
@@ -15,7 +15,7 @@ int main(int argc, char* argv[]){
     scanf("%f", &altura);
 
     float area_retangulo = base * altura;
-    printf("A area do retangulo e de: %.2f", base, altura, area_retangulo);
+    printf("A area do retangulo e de: %.2f", area_retangulo);
 
 return 0;
 }

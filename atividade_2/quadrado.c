@@ -4,17 +4,16 @@
 
 int main(int argc, char* argv[]){
 
-float lado;
+    float lado;
 
-printf("\tCalcule a area de quadrados!\n");
-system("pause");
+    printf("\tCALCULE A AREA DE QUADRADOS!\n");
+    system("pause");
 
-printf("Insira o valor de um lado: ");
-scanf("%f", lado);
+    printf("Insira o valor do lado: ");
+    scanf("%f", &lado);
 
-float area_quadrado = pow(lado, 2);
-printf("A area do quadrado e de: %.2f",lado, area_quadrado);
-system("pause");
+    float area_quadrado = pow(lado, 2);
+    printf("A area do quadrado e de: %.2f", area_quadrado);
 
-return 0;
+    return 0;
 }
