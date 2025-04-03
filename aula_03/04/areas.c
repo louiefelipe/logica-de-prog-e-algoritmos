@@ -26,7 +26,8 @@ case 'c':
     scanf("%f", &raio);
 
     area_circulo = M_PI * pow(raio, 2);
-printf("A area do circulo e: %.3f\n", area_circulo);
+    printf("A area do circulo e: %.3f\n", area_circulo);
+    system("pause");
     break;
 
 case 'l':
@@ -39,7 +40,7 @@ case 'l':
 
     area_losango = (Diagonal_maior * diagonal_menor) / 2;
     printf("A area do losango e de: %.2f", area_losango);
-
+    system("pause");
     break;
 
     case 'q':
@@ -49,7 +50,7 @@ case 'l':
 
     area_quadrado = pow(lado, 2);
     printf("A area do quadrado e de: %.2f", area_quadrado);
-
+    system("pause");
     break;
 
     case 'r':
@@ -62,6 +63,7 @@ case 'l':
 
     area_retangulo = base * altura;
     printf("A area do retangulo e de: %.2f", area_retangulo);
+    system("pause");
     break;
 
     case 't':
@@ -74,6 +76,7 @@ case 'l':
 
     area_triangulo = base * altura / 2;
     printf("A area do triangulo e de: %.2f", area_triangulo);
+    system("pause");
     break;
 
     case 'z':
@@ -89,6 +92,7 @@ case 'l':
 
     area_trapezio = (Base_maior + base_menor) * altura / 2;
     printf("A area do trapezio e de: %.2f", area_trapezio);
+    system("pause");
     break;
 
 default:
