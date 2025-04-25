@@ -63,6 +63,5 @@ for (i = 0; i < alunos; i++){
         return 0;;
     }
 
-
     return 0;
 }
