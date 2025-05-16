@@ -1,12 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-int ler_primo()
-
-int main(agrc, char* argv[]){
+int main(int agrc, char* argv[]){
 
 int numero;
 
-printf("\tDescubra se seu numero eh primo\n");
+printf("\tDescubra numero primo\n");
+system("pause");
 
+printf("Insira um numero maior que 0: ");
+scanf("%d", &numero);
+
+if (numero <= 1 || numero > 2){
+    printf("Numero NAO primo!");
+}
+else{
+    printf("Numero primo!");
+}
+return 0;
 }
