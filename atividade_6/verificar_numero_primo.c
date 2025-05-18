@@ -2,19 +2,38 @@
 
 int main(int agrc, char* argv[]){
 
-int numero;
+int i, numero;
+int primo = 1;
 
 printf("\tDescubra numero primo\n");
-system("pause");
 
-printf("Insira um numero maior que 0: ");
-scanf("%d", &numero);
+do{
+    printf("Insira um numero maior que 0: ");
+    scanf("%d", &numero);
 
-if (numero <= 1 || numero > 2){
-    printf("Numero NAO primo!");
+    if(numero <= 1){
+    printf("Numeros menores ou igual a 1 nao sao primos. Tente novamente.\n");
 }
-else{
-    printf("Numero primo!");
-}
-return 0;
+
+}while(numero <= 1);
+
+    if (numero == 2) {
+        primo = 1; 
+    } 
+    else {
+        for (i = 2; i * i <= numero; i++) {
+            if (numero % i == 0) {
+                primo = 0;
+                break;
+            }
+        }
+    }
+
+    if (primo) {
+        printf("%d = Numero PRIMO.\n", numero);
+    } else {
+        printf("%d = Numero NAO primo.\n", numero);
+    }
+
+    return 0;
 }
