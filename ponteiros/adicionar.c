@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <time.h>
 #define MAX_TXT 256
 
 int main(int argc, char* argv[]){
 
 char texto[MAX_TXT];
-FILE *arq = fopen(argv[1], "a");
+FILE *arq = fopen(argv[1], "w");
 
 if(arq == NULL){
     printf("Erro ao abrir arquivo");
