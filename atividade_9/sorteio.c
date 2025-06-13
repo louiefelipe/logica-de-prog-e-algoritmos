@@ -1,45 +1,69 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
+#include <string.h>
 #define MAX_TEXT 256
 
-int main(int argc, char* argv[]){
+int main (int argc, char* argv[]){
 
     if(argc != 4){
-    printf("Informe 3 argumentos = minimo, maximo, esperado.");
+    printf("Informe 3 argumentos = minimo, maximo, esperado.\n", argv[0]);
+    printf("Exemplo: %s 1 6 3", argv[0]);
     return 1;
 }
 
-int menorr atoi(argv[1]);
-int maior atoi(argv[2]);
-int esperado atoi(argv[3]);
+int menor = atoi(argv[1]);
+int maior = atoi(argv[2]);
+int esperado = atoi(argv[3]);
 
-if(menor >= maior){
-    printf("O primeiro argumento deve ser menor do que o segundo. Tente novamente.");
+if (menor >= maior){
+    printf("O primeiro argumento (%d) deve ser menor do que o segundo (%d). Tente novamente.", menor, maior);
     return 1;
 }
-if(esperado < menor || esperado > maior){
-    printf("O numero desejado deve estar entre os dois primeiros argumentos. Tente novamente.")
+
+if (esperado < menor || esperado > maior){
+    printf("O numero desejado (%d) deve estar entre os dois primeiros argumentos. Tente novamente.", esperado);
     return 1;
 }
 
 srand(time(NULL));
 
+int sorteado;
+do {
+    sorteado = rand();
+} while (sorteado > (RAND_MAX - (RAND_MAX % (maior - menor + 1))));
+sorteado = menor + (sorteado % (maior - menor + 1));
 
-char texto[MAX_TEXT];
-FILE *sorteio = fopen(sorteio.txt, "w");
+char resultado[MAX_TEXT];
 
-if(sorteio == NULL){
+if (sorteado == esperado){
+    strcpy(resultado, "sorteado");
+
+    } 
+    else {
+        strcpy(resultado, "Nao sorteado");
+    }
+
+    printf("Numero sorteado: %d\n", sorteado);
+    printf("Resultado: %s\n", resultado);
+
+FILE *log = fopen("log.txt", "a");
+
+if(log == NULL){
     printf("Erro ao abrir arquivo");
+
     return 1;
 }
-fprintf ("Numero minimo: %d\nNumero maximo: %d\nNumero esperado: %d\nNumero sorteado: %d", menor, maior, esperado, sorteado, rand());
 
-    fprintf(sorteio, texto);
+fprintf(log, "Numero minimo: %d\n", menor);
+fprintf(log, "Numero maximo: %d\n", maior);
+fprintf(log, "Numero esperado: %d\n", esperado);
+fprintf(log, "Numero sorteado: %d\n", sorteado);
+fprintf(log, "Resultado: %d\n", resultado);
 
-fclose(sorteio);
 
+fclose(log);
 
-
-
+return 0;
 
 }
