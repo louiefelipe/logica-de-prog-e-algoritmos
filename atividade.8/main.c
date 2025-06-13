@@ -18,11 +18,11 @@ int main(int argc, char* argv[]){
         return 1;
 }
     
-pontos pontosA, pontosB;
-pontosA.X = atof(argv[1]);
-pontosA.Y = atof(argv[2]);
-pontosA.X = atof(argv[3]);
-pontosA.Y = atof(argv[4]);
+pontos A, B;
+A.X = atof(argv[1]);
+A.Y = atof(argv[2]);
+B.X = atof(argv[3]);
+B.Y = atof(argv[4]);
 
 double distancia = distancia_calc(pontosA, pontosB);
 printf("Distancia entre os pontos: %.2lf", distancia);

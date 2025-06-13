@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <string.h>
-#define MAX_TEXT 256
 
 int main (int argc, char* argv[]){
 
+FILE *log = fopen("log.txt", "a");
+
+if(log == NULL){
+    printf("Erro ao abrir arquivo");
+
+    return 1;
+}
     if(argc != 4){
     printf("Informe 3 argumentos = minimo, maximo, esperado.\n", argv[0]);
     printf("Exemplo: %s 1 6 3", argv[0]);
@@ -26,43 +31,32 @@ if (esperado < menor || esperado > maior){
     return 1;
 }
 
-srand(time(NULL));
+srand((unsigned)time(NULL));
 
 int sorteado;
-do {
-    sorteado = rand();
-} while (sorteado > (RAND_MAX - (RAND_MAX % (maior - menor + 1))));
-sorteado = menor + (sorteado % (maior - menor + 1));
 
-char resultado[MAX_TEXT];
+sorteado = (rand() % (maior - menor + 1)) + menor;
 
 if (sorteado == esperado){
-    strcpy(resultado, "sorteado");
+    fprintf(log_txt, "sorteado\n");
 
     } 
     else {
-        strcpy(resultado, "Nao sorteado");
+        fprintf(log_txt, "Nao sorteado\n");
     }
 
-    printf("Numero sorteado: %d\n", sorteado);
-    printf("Resultado: %s\n", resultado);
-
-FILE *log = fopen("log.txt", "a");
-
-if(log == NULL){
-    printf("Erro ao abrir arquivo");
-
-    return 1;
-}
-
-fprintf(log, "Numero minimo: %d\n", menor);
-fprintf(log, "Numero maximo: %d\n", maior);
-fprintf(log, "Numero esperado: %d\n", esperado);
-fprintf(log, "Numero sorteado: %d\n", sorteado);
-fprintf(log, "Resultado: %d\n", resultado);
+    fprintf(log_txt, "Numero sorteado: %d\n", sorteado);
+    fprintf(log_txt, "Resultado: %s\n", resultado);
 
 
-fclose(log);
+fprintf(log_txt, "Numero minimo: %d\n", menor);
+fprintf(log_txt, "Numero maximo: %d\n", maior);
+fprintf(log_txt, "Numero esperado: %d\n", esperado);
+fprintf(log_txt, "Numero sorteado: %d\n", sorteado);
+fprintf(log_txt, "Resultado: %d\n", resultado);
+
+
+fclose(log_txt);
 
 return 0;
 
